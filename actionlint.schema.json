@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Self-Hosted Runner Configuration",
+  "type": "object",
+  "properties": {
+    "self-hosted-runner": {
+      "type": "object",
+      "properties": {
+        "labels": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Labels of self-hosted runner in array of string"
+        }
+      },
+      "required": ["labels"]
+    },
+    "config-variables": {
+      "anyOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Configuration variables in array of strings defined in your repository or organization"
+        },
+        {
+          "type": "null",
+          "description": "Configuration variables can also be null"
+        }
+      ]
+    }
+  },
+  "required": ["self-hosted-runner", "config-variables"]
+}
