@@ -1,0 +1,61 @@
+.heroBanner {
+  padding: 4rem 0;
+  background-color: var(--ifm-color-primary);
+  color: white;
+  text-align: center;
+}
+
+.hero__title {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.hero__subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.buttons {
+  margin-top: 2rem;
+}
+
+.features {
+  padding: 4rem 0;
+  background-color: var(--ifm-background-color);
+}
+
+.featureImage {
+  height: 200px;
+}
+
+.cta {
+  padding: 4rem 0;
+  background-color: var(--ifm-color-primary-lightest);
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.cta p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.button--custom {
+  background-color: var(--ifm-color-info);
+  border-color: var(--ifm-color-info);
+  color: var(--ifm-color-light);
+}
+
+.button--custom:hover {
+  background-color: var(--ifm-color-info-dark);
+  border-color: var(--ifm-color-info-dark);
+}
+
+.avatarContainer {
+  margin-top: 10rem;
+  text-align: center;
+}

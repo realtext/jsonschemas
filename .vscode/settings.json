@@ -1,0 +1,29 @@
+{
+  "editor.defaultFormatter": "trunk.io",
+  "editor.formatOnSave": true,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "git.enableSmartCommit": true,
+  "git.ignoreLimitWarning": true,
+  "gitlens.advanced.fileHistoryFollowsRenames": true,
+  "gitlens.codeLens.enabled": false,
+  "terminal.integrated.scrollback": 100000,
+  "workbench.list.horizontalScrolling": true,
+  "files.associations": {
+    "*.json5": "json5"
+  },
+  "[markdown]": {
+    "editor.fontLigatures": false,
+    "editor.defaultFormatter": "fcrespo82.markdown-table-formatter"
+  },
+  "[yaml]": {
+    "editor.fontLigatures": false
+  },
+  "material-icon-theme.folders.associations": {
+    ".taskfiles": "utils"
+  },
+  "[mdx]": {
+    "editor.defaultFormatter": "trunk.io"
+  }
+}

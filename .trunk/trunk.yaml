@@ -1,0 +1,18 @@
+# yaml-language-server: $schema=https://static.trunk.io/pub/trunk-yaml-schema.json
+version: 0.1
+
+cli:
+  version: 1.22.2
+
+plugins:
+  sources:
+  - id: trunk
+    ref: v1.6.0
+    uri: https://github.com/trunk-io/plugins
+  - id: realtext_configs
+    ref: v1.0.0
+    uri: https://github.com/realtext/trunk-config
+
+lint:
+  disabled:
+  - remark-lint

@@ -1,0 +1,75 @@
+---
+sidebar_position: 1
+---
+
+import React from 'react';
+
+# Intro
+
+## What are JSON Schemas?
+
+JSON Schema is a powerful tool for validating the structure of JSON data. It defines the expected format and constraints for JSON documents, making it easier to ensure consistency and correctness. JSON Schema is used to describe the structure of JSON data, including the types of values, allowed values, and other validation rules.
+
+## Why should I use JSON Schemas?
+
+Using JSON Schemas provides several benefits:
+
+1. **Validation**: Ensures that the JSON data adheres to a defined structure, reducing the risk of errors.
+2. **Documentation**: Serves as a form of documentation for the expected structure of the JSON data, making it easier for developers to understand and use.
+3. **Interoperability**: Facilitates data exchange between systems by providing a standard format for JSON data.
+4. **Tooling Support**: Many tools and libraries support JSON Schema, enabling automatic validation, code generation, and more.
+
+## How do I use JSON Schemas?
+
+To use JSON Schemas, follow these steps:
+
+1. **Define the Schema**: Create a JSON Schema file that describes the structure and constraints of your JSON data.
+
+2. **Validate JSON Data**: Use a JSON Schema validation library to check that your JSON data conforms to the defined schema.
+
+3. **Integrate with Tools**: Leverage tooling that supports JSON Schema for enhanced development workflows, such as automated testing, code generation, and API documentation.
+
+## Examples: Using JSON Schema with YAML in VSCode
+
+While JSON Schema is primarily used for JSON data, it can also be applied to YAML documents. Here’s how you can use JSON Schema to validate and autocomplete YAML files in VSCode:
+
+1. **Install the YAML Extension**: Ensure you have the [YAML extension](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml) installed in VSCode.
+
+2. **Define a JSON Schema**: Create a schema file, for example, `example-schema.json`:
+
+   ```json
+   {
+     "$schema": "http://json-schema.org/draft-07/schema#",
+     "type": "object",
+     "properties": {
+       "name": {
+         "type": "string",
+         "description": "The name of the person"
+       },
+       "age": {
+         "type": "integer",
+         "description": "The age of the person",
+         "minimum": 0
+       },
+       "email": {
+         "type": "string",
+         "format": "email",
+         "description": "The email address of the person"
+       }
+     },
+     "required": ["name", "email"]
+   }
+   ```
+
+3. **Validate and Autocomplete**: Open or create a YAML file that matches the schema, for example, `example.yaml`:
+
+   ```yaml
+   # yaml-language-server: $schema=example-schema.json
+   name: John Doe
+   age: 30
+   email: john.doe@example.com
+   ```
+
+   VSCode will automatically validate the YAML file against the schema and provide autocompletion based on the schema definitions.
+
+By following these steps, you can leverage the power of JSON Schema to ensure that your YAML documents are well-structured and valid, with the added benefit of autocompletion and validation in VSCode.

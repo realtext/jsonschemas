@@ -1,0 +1,22 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+version: "3"
+
+vars:
+  PIP_REQUIREMENTS_FILE: "{{.ROOT_DIR}}/requirements.txt"
+
+env:
+  PYTHON_BIN: python3
+  VIRTUAL_ENV: "{{.ROOT_DIR}}/.venv"
+
+includes:
+  workstation:
+    aliases: [ws]
+    taskfile: .taskfiles/workstation/Taskfile.yaml
+  docusaurus:
+    aliases: [doc]
+    taskfile: .taskfiles/docusaurus/Taskfile.yaml
+
+tasks:
+  default:
+    cmd: task -l
+    silent: true
